@@ -1,0 +1,48 @@
+---
+title: "Distribuciones de probabilidad"
+output: pdf_document
+date: '2022-06-22'
+---
+
+```{r echo=FALSE}
+library(ggplot2)
+```
+
+## Distribución uniforme
+
+```{r}
+dis_unif<-runif(2000,10,15)
+dis_unif<-data.frame(dis_unif)
+
+ggplot(dis_unif, aes(x=dis_unif))+
+  geom_histogram(binwidth = 0.1, col='black', fill='green', alpha=0.4)
+```
+
+## Distribución Poisson
+
+```{r}
+dis_pois<-rpois(2000,10)
+dis_pois<-data.frame(dis_pois)
+ggplot(dis_pois, aes(x=dis_pois))+
+  geom_histogram(binwidth = 0.1, col='black', fill='blue', alpha=0.4)
+  
+```
+
+## Distribución Exponencial
+
+```{r}
+dis_Exp<-rexp(2000,10)
+dis_Exp<-data.frame(dis_Exp)
+ggplot(dis_Exp, aes(x= dis_Exp))+
+  geom_histogram(binwidth = 0.1, col='black', fill='red', alpha=0.4)
+```
+
+## Distribución Bernoulli
+
+```{r}
+dis_binom<-rbinom(8,100,0.6)
+dis_binom<-data.frame(dis_binom)
+
+ggplot(dis_binom, aes(x= dis_binom))+
+  geom_histogram(binwidth = 0.1, col='black', fill='pink', alpha=0.4)
+```
