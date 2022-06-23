@@ -1,3 +1,4 @@
+#ESTA FUNCION GENERA LOS ARCHIVOS PEDIDOS EXPERIMENTO A Y EXPERIMENTO B
 experimentos<-function(){
   n<-as.integer(readline("Tamaño: "))
   print("Experimento A")
@@ -15,6 +16,8 @@ experimentos<-function(){
   write.csv(exp_b,"Experimento_b.csv")
   Experimento_b<<-read.csv("Experimento_b.csv")
 }
+#ESTA FUNCION EJECUTA E IMPRIME DISTINTAS FUNCIONES SOBRE LOS ARCHIVOS PREVIAMENTE GENERADOS
+#FUNCIONES RELACIONADAS CON LA RELACIÓN ENTRE AMBOS EXPERIMENTOS
 inferencia<-function(){
   print("1. indicar si la diferencia en la media de los datos es estadísticamente significativa.")
   print("2. mostrar en pantalla la correlación de Pearson y Spearman de los datos.")
